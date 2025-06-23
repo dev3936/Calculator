@@ -1,0 +1,63 @@
+import java.util.Scanner;
+class Calculator
+{
+public static void main(String args[])
+{
+float x,y,z;
+char s;
+Scanner A = new Scanner(System.in);
+System.out.println("Enter first value");
+x = A.nextFloat();
+
+System.out.println("Enter secand value");
+y = A.nextFloat();
+
+System.out.println("Enter Operator +,-,/,*");
+s = A.next().charAt(0);
+
+switch (s)
+{
+case '+':
+{
+z  = x + y;
+System.out.println("Additon is = "+z);
+}
+
+case '-':
+{
+z  = x - y;
+System.out.println("substraction is = "+z);
+break;
+
+}
+
+case '*':
+{
+z  = x*y;
+System.out.println("multiplication is = "+z);
+break;
+}
+
+case '/':
+{
+if(y>0)
+{
+z = x / y;
+System.out.println("division is = "+z);
+break;
+}
+else
+System.out.println("divider is 0 ");
+break;
+
+}
+
+default :
+{
+System.out.println("wrong operation");
+break;
+}
+
+}
+}
+}
